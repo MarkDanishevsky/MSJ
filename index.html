@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple Website</title>
+  <title>MSJ ISP</title>
   <style>
     html, body {
       margin: 0;
@@ -12,15 +11,36 @@
       height: 100%;
       width: 100%;
     }
+
     iframe {
       border: none;
-      width: 100vw;
-      height: 100vh;
       display: block;
+      width: 100%;
+    }
+
+    #doc-frame {
+      height: 100vh;
+    }
+
+    #pdf-frame {
+      height: 600px; /* or adjust as needed */
+    }
+
+    @font-face {
+      font-family: 'JetBrains Mono ExtraBold';
+      src: url('JetBrains_Mono/static/JetBrainsMono-ExtraBold.ttf') format('truetype');
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    h1 {
+      font-family: 'JetBrains Mono ExtraBold', monospace;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://docs.google.com/document/d/e/2PACX-1vRiNFF3jSyFmrq9Q5EG6XvNaLcXlv4EQau8pyFqLQs3t_0-GoHbsrhIH8nN29uJEGp924T4in0CUhot/pub?embedded=true"></iframe>
+  <iframe id="doc-frame" src="https://docs.google.com/document/d/e/2PACX-1vRiNFF3jSyFmrq9Q5EG6XvNaLcXlv4EQau8pyFqLQs3t_0-GoHbsrhIH8nN29uJEGp924T4in0CUhot/pub?embedded=true"></iframe>
+  <h1 align="center">References</h1>
+  <p align="center"><iframe id="pdf-frame" style="width: 80%;" src="assets/references.pdf"></iframe></p>
 </body>
 </html>
